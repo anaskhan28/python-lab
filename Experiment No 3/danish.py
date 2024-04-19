@@ -26,6 +26,6 @@ def create_array():
     sum_arr = calculate_sum(arr)
     print_even_or_odd_numbers(arr, sum_arr)
     calculate_average(arr)
-    generate_type_error(arr)
+    # generate_type_error(arr)
 
 create_array()

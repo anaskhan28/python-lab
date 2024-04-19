@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import re
-
+import os
 
 info_array = []
 # Create Window
@@ -9,6 +9,12 @@ arra = 1
 
 
 class RegistrationForm(tk.Tk):
+
+    global image_path
+    image_path = os.path.join(
+            os.path.dirname(os.path.realpath(__file__)), "assets"
+        )
+    
     def __init__(self):
         super().__init__()
         # win = tk.Tk()
@@ -30,7 +36,7 @@ class RegistrationForm(tk.Tk):
 
     def create_widgets(self):
         # Add Frame
-        self.backgroundImage = tk.PhotoImage(file="assets\\image_1.png")
+        self.backgroundImage = tk.PhotoImage(file= os.path.join(image_path, "image_1.png"))
         self.bg_image = tk.Label(
             self.home_frame, image=self.backgroundImage, bg="#525561"
         )
